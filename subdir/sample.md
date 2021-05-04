@@ -14,6 +14,6 @@ Foo1 -> Foo5 : To database
 @enduml
 ```
 
-![](./example/fichier-de-test2.svg)
+![](./generated-svg-uml/fichier-de-test2.svg)
 
 test
