@@ -1,0 +1,19 @@
+# test-generate-plantuml
+
+```plantuml:fichier-de-test
+@startuml
+actor Foo1
+boundary Foo2
+control Foo3
+entity Foo4
+database Foo5
+Foo1 -> Foo2 : To boundary
+Foo1 -> Foo3 : To control
+Foo1 -> Foo4 : To entity
+Foo1 -> Foo5 : To database
+@enduml
+```
+
+![](./example/fichier-de-test.svg)
+
+test
