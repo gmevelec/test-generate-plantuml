@@ -1,6 +1,6 @@
 # test-generate-plantuml
 
-```plantuml
+```plantuml:fichier-de-test
 @startuml
 actor Foo1
 boundary Foo2
@@ -15,3 +15,5 @@ Foo1 -> Foo5 : To database
 Foo1 -> Foo6 : To collections
 @enduml
 ```
+
+![](./fichier-de-test.svg)
