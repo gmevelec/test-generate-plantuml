@@ -17,3 +17,5 @@ Foo1 -> Foo6 : To collections
 ```
 
 ![](./fichier-de-test.svg)
+
+test
