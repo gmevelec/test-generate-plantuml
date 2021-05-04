@@ -16,6 +16,6 @@ Foo1 -> Foo6 : To collections
 @enduml
 ```
 
-![](./fichier-de-test.svg)
+![](./example/fichier-de-test.svg)
 
 test
