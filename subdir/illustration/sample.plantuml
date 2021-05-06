@@ -1,4 +1,5 @@
 @startuml sample
+skinparam backgroundColor #AAAAAA
 actor Foo1
 boundary Foo2
 control Foo3
