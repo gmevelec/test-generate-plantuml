@@ -1,0 +1,41 @@
+@startuml create-user-actual
+skinparam backgroundColor #DDDDDD
+hide footbox
+actor User
+collections FlexupApp
+control FlexupAPI
+database FlexupDB
+entity Keycloak
+database KeycloakDB
+==Création utilisateur==
+User -> FlexupApp : Demande accès application
+activate FlexupApp
+FlexupApp -> User : Redirige vers page de connexion keycloak
+deactivate FlexupApp
+User -> Keycloak : Demande formulaire enregistrement
+activate Keycloak
+Keycloak -> User : Retourne formulaire enregistrement
+deactivate Keycloak
+User -> Keycloak : Soumission formulaire
+activate Keycloak
+Keycloak -> KeycloakDB : Persistance utilisateur
+activate KeycloakDB
+KeycloakDB -> Keycloak : Retourne enregistrement utilisateur
+deactivate KeycloakDB
+Keycloak -> FlexupApp : Retourne informations utilisateur
+deactivate Keycloak
+==Création compte==
+activate FlexupApp
+FlexupApp -> User : Redirige vers création compte
+User -> FlexupApp : Soumission formulaire
+FlexupApp -> FlexupAPI : Soumission information compte
+activate FlexupAPI
+FlexupAPI -> FlexupDB : Persistance compte
+activate FlexupDB
+FlexupDB -> FlexupAPI : Retourne enregistrement compte
+deactivate FlexupDB
+FlexupAPI -> FlexupApp : Retourne enregistrement compte
+deactivate FlexupAPI
+FlexupApp -> User : Redirige vers page accueil compte
+deactivate FlexupApp
+@enduml
